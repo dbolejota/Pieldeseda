@@ -3,16 +3,24 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
 }
+<<<<<<< HEAD
 /* body{
     background-color: initial !important;
 } */
+=======
+
+>>>>>>> 94669b91eb5e30680d65babe525f28064860faf5
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
+<<<<<<< HEAD
     background: url('fondoo.png') no-repeat center/cover;
+=======
+    background: url('uobxovaqsk9svubfyhy3.PNG') no-repeat center/cover;
+>>>>>>> 94669b91eb5e30680d65babe525f28064860faf5
 }
 
 .form-box {
@@ -114,6 +122,7 @@ button:hover {
 }
 .forget a:hover {
     text-decoration: underline;
+<<<<<<< HEAD
 }
 
  /* Media Queries */
@@ -125,3 +134,6 @@ button:hover {
     }
 }
 
+=======
+}
+>>>>>>> 94669b91eb5e30680d65babe525f28064860faf5
