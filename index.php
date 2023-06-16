@@ -36,7 +36,7 @@
     </section>
 
 
-
+    
 <?php
 // envia un alert en pantalla diciendo Email y/o password incorrectos, volver a intentarlo y boton de aceptar 
 if (isset($_GET['error']) && $_GET['error'] == 1) {

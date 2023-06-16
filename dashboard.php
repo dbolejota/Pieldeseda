@@ -33,69 +33,53 @@ if (isset($_GET['login']) && $_GET['login'] === 'success') {
     <title>Piel de seda</title>
     <link rel="stylesheet" href="dashboard.css">
     <!-- Incluye las bibliotecas de DataTables y Buttons -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">   <!--link de iconscout  -->
 </head>
 
 <body>
-    <div class="container">
-        <div class="cuadro">
-            <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
-                        <span class="title">Piel de seda</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                        <span class="title">Usuario</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="briefcase-sharp"></ion-icon></span>
-                        <span class="title">Productos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                        <span class="title">Inventario</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                        <span class="title">Provedores</span>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="clouds.png" alt="logo">
+            </div>
+            <span class="logo_name">PIEL DE SEDA</span>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Inicio</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Usuarios</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-bag"></i>
+                        <span class="link-name">Productos</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-truck"></i>
+                        <span class="link-name">Proveedores</span>
+                    </a></li>
+            </ul>
+            <!-- para salir Logout -->
+            <ul class="logout-mod">
+            <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Cerrar Sesión</span>
+                    </a></li>
+<!-- para usarlo en modo obscuro-->
+                    <li>
+                        <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Modo Obscuro</span>
                     </a>
                 </li>
             </ul>
         </div>
-        <!--Main-->
-        <div class="main">
-            <div class="top">
-                <div class="toggle">
-                    <ion-icon name="menu-sharp"></ion-icon>
-                </div>
-                <!--Buscar-->
-                <div class="buscar">
-                    <label>
-                        <input type="text" placeholder="Buscar">
-                        <ion-icon name="search-sharp"></ion-icon> 
-                    </label>
-                </div>
-                <!--user dasboard-->
-                <div class="user" alt="">
-                    <img src="WhatsApp Image 2023-05-30 at 2.30.10 PM.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</nav>
 </body>
 </html>
