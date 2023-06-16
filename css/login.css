@@ -12,7 +12,7 @@ section {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('fondoo.png') no-repeat center/cover;
+    background: url('../img/fondoo.png') no-repeat center/cover;
 }
 
 .form-box {

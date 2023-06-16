@@ -1,7 +1,7 @@
 <?php
 // Esta línea incluye el archivo `conexion.php` contiene la  conexión de la base de datos
 //  `require_once` asegura que el archivo se incluya solo una vez y evita errores 
-require_once 'conexion.php';     
+require_once 'modelo/conexion.php';     
 
 // var_dump` es una función de depuración en PHP que muestra información sobre una variable.
 // Esta línea muestra el contenido del arreglo `$_POST`, que contiene los datos enviados a través de una petición HTTP utilizando el método POST
