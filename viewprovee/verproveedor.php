@@ -1,25 +1,8 @@
-
 <?php
-
-
-    /// que carpetas se requieren 
-    require_once('../modelo/conexion.php'); 
-    require_once('../modelo/consultasinform.php');
-    require_once('../controlador/mostrarinform.php'); 
-
-
-   
+    require_once("../modelo/conexion.php");
+    require_once("../modelo/consultasprov.php");
+    require_once("../controlador/controlprove/mostrar.php");
 ?>
-
-
-
-
-<!--
-    meteer entre llaves de php
-require_once "vistas/parte_superior.php"
-
-//diseño de la base de datos-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,19 +15,13 @@ require_once "vistas/parte_superior.php"
     <!-- Incluye las bibliotecas de DataTables y Buttons -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
-
-
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 </head>
 
 <body>
 
 <div class="informe">
-
-
         <div class="cont-dash-btn">
                 <div class="cuadro">
                     <ul>
@@ -75,53 +52,26 @@ require_once "vistas/parte_superior.php"
                         <li>
                             <a href="../informes.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                                <span class="title">informes</span>
+                                <span class="title">Informes</span>
                             </a>
-
-                           
-                                <li>
-                                    <a href="infVentas.php"><i class="ti-pencil-alt"></i>Informe-VENTAS</a>
-                                </li>
-                                <li>
-                                    <a href="infProve.php"><i class="ti-eye"></i>Informe-PROVEHEDORES</a>
-                                </li>
-                                <li>
-                                    <a href="infProductos.php"><i class="ti-eye"></i>Informe-PRODUCTOS</a>
-                                </li>
-                                <li>
-                                    <a href="infUser.php"><i class="ti-eye"></i>Informe-USUARIO</a>
-                                </li>
-
-
-                           
-
-                        </li>
+                      </li>
 
                         <li>
-                        <a href="../viewprovee/verproveedor.php">
+                            <a href="verproveedor.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                                 <span class="title">Provedores</span>
                             </a>
+                            <li>
+                                    <a href="#"><i class="ti-pencil-alt"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="ti-eye"></i></a>
+                                </li>
+
                         </li>
                     </ul>
                 </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="cont-dash-informe">
 
@@ -139,30 +89,30 @@ require_once "vistas/parte_superior.php"
                             </div>
                         </div>
                         
-                    
-
-<!-- holaaa -->
             <div>
                 <br>
                     <br>
-               <h2>INFORME DE VENTAS</h2>
-                <p>Por favor seleccione la accion por la cual desea sacar un informe</p>
+               <h2>Proveedores registrados</h2>
+                <p>Seleccionar el proveedor a editar o eliminar</p>
           
             </div>
-
-            
-
-
-
-            <div class="card-body">
-                                <div class="bootstrap-data-table-panel">
-                                    <div class="table-responsive">
+                        <div >
+                                <div >
+                                    <div >
+                                           
                                         <?php
-                                         inforVentas()
+                                             cargarproveedor();
+                                            
                                         ?>
                                     </div>
+                                    <a class="btn btn-primary" href="registro2.php" role="button">Registra nuevo proveedor</a>
                                 </div>
-                                </div>
+                        </div>
+                    
+            </div>
+
+           
+
 
    
 
@@ -173,44 +123,29 @@ require_once "vistas/parte_superior.php"
 
     
 </div>
+
     
 
     
 
 
    
+    
     <!-- Incluye las bibliotecas de jQuery, DataTables y Buttons -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
-
-   <!-- Incluye las bibliotecas adicionales para PDF y Excel -->
-   <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.excel.min.js"></script>
-
-    <!-- Incluye las bibliotecas de jQuery, DataTables y Buttons -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
-
-
-
-    <script src="lib/xlsx.full.min.js"></script>
-    <script src="../botonesjs/boton.js"></script>
 
     
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+ 
+
+    
+
+    
 
 
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 </html>

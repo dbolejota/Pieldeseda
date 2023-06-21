@@ -1,25 +1,8 @@
-
 <?php
-
-
-    /// que carpetas se requieren 
-    require_once('../modelo/conexion.php'); 
-    require_once('../modelo/consultasinform.php');
-    require_once('../controlador/mostrarinform.php'); 
-
-
-   
+    require_once("../modelo/conexion.php");
+    require_once("../modelo/consultasprov.php");
+    require_once("../controlador/controlprove/mostrar.php");
 ?>
-
-
-
-
-<!--
-    meteer entre llaves de php
-require_once "vistas/parte_superior.php"
-
-//diseño de la base de datos-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +15,7 @@ require_once "vistas/parte_superior.php"
     <!-- Incluye las bibliotecas de DataTables y Buttons -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
-
-
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 </head>
 
@@ -75,111 +54,78 @@ require_once "vistas/parte_superior.php"
                         <li>
                             <a href="../informes.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                                <span class="title">informes</span>
+                                <span class="title">Inventario</span>
                             </a>
-
-                           
-                                <li>
-                                    <a href="infVentas.php"><i class="ti-pencil-alt"></i>Informe-VENTAS</a>
-                                </li>
-                                <li>
-                                    <a href="infProve.php"><i class="ti-eye"></i>Informe-PROVEHEDORES</a>
-                                </li>
-                                <li>
-                                    <a href="infProductos.php"><i class="ti-eye"></i>Informe-PRODUCTOS</a>
-                                </li>
-                                <li>
-                                    <a href="infUser.php"><i class="ti-eye"></i>Informe-USUARIO</a>
-                                </li>
-
-
-                           
 
                         </li>
 
                         <li>
-                        <a href="../viewprovee/verproveedor.php">
+                        <a href="verproveedor.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                                 <span class="title">Provedores</span>
                             </a>
+                            
+
                         </li>
                     </ul>
                 </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="cont-dash-informe">
-
-                    
-                        <div class="top">
-                            <div class="toggle">
-                                <ion-icon name="grid-sharp"></ion-icon>
-                            </div>
-                            <!--Buscar-->
-                            <div class="buscar">
-                                    <label>
-                                        <input type="text" placeholder="Buscar">
-                                        <ion-icon name="search-sharp"></ion-icon> 
-                                    </label>
+        <div class="content-wrap">
+        
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Modificar Proveedor</h1>
+                                <p>Modifique los campos del formulario </p>
                             </div>
                         </div>
-                        
-                    
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        
+                                    </li>
+                                    
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                
+                                <div class="card-body">
+                                    <div class="basic-form">
+                                    
 
-<!-- holaaa -->
-            <div>
-                <br>
-                    <br>
-               <h2>INFORME DE VENTAS</h2>
-                <p>Por favor seleccione la accion por la cual desea sacar un informe</p>
-          
-            </div>
-
-            
 
 
 
-            <div class="card-body">
-                                <div class="bootstrap-data-table-panel">
-                                    <div class="table-responsive">
                                         <?php
-                                         inforVentas()
+                                            cargaproveedor()
                                         ?>
+
                                     </div>
                                 </div>
-                                </div>
-
-   
-
-    <div>
-
+                            </div>
+                        </div>                       
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
-    </div>
 
-    
-</div>
-    
-
-    
-
-
-   
-    <!-- Incluye las bibliotecas de jQuery, DataTables y Buttons -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
@@ -210,7 +156,7 @@ require_once "vistas/parte_superior.php"
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 </html>

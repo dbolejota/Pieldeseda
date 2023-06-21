@@ -1,25 +1,3 @@
-
-<?php
-
-
-    /// que carpetas se requieren 
-    require_once('../modelo/conexion.php'); 
-    require_once('../modelo/consultasinform.php');
-    require_once('../controlador/mostrarinform.php'); 
-
-
-   
-?>
-
-
-
-
-<!--
-    meteer entre llaves de php
-require_once "vistas/parte_superior.php"
-
-//diseño de la base de datos-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,18 +10,13 @@ require_once "vistas/parte_superior.php"
     <!-- Incluye las bibliotecas de DataTables y Buttons -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
-
-
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 </head>
 
 <body>
 
 <div class="informe">
-
 
         <div class="cont-dash-btn">
                 <div class="cuadro">
@@ -75,111 +48,69 @@ require_once "vistas/parte_superior.php"
                         <li>
                             <a href="../informes.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                                <span class="title">informes</span>
+                                <span class="title">Informes</span>
                             </a>
+                      </li>
 
-                           
-                                <li>
-                                    <a href="infVentas.php"><i class="ti-pencil-alt"></i>Informe-VENTAS</a>
-                                </li>
-                                <li>
-                                    <a href="infProve.php"><i class="ti-eye"></i>Informe-PROVEHEDORES</a>
-                                </li>
-                                <li>
-                                    <a href="infProductos.php"><i class="ti-eye"></i>Informe-PRODUCTOS</a>
-                                </li>
-                                <li>
-                                    <a href="infUser.php"><i class="ti-eye"></i>Informe-USUARIO</a>
-                                </li>
-
-
-                           
-
-                        </li>
 
                         <li>
-                        <a href="../viewprovee/verproveedor.php">
+                        <a href="verproveedor.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                                 <span class="title">Provedores</span>
-                            </a>
+                            </a>    
                         </li>
                     </ul>
                 </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="cont-dash-informe">
 
-                    
-                        <div class="top">
-                            <div class="toggle">
-                                <ion-icon name="grid-sharp"></ion-icon>
-                            </div>
-                            <!--Buscar-->
-                            <div class="buscar">
-                                    <label>
-                                        <input type="text" placeholder="Buscar">
-                                        <ion-icon name="search-sharp"></ion-icon> 
-                                    </label>
-                            </div>
-                        </div>
-                        
-                    
-
-<!-- holaaa -->
             <div>
                 <br>
                     <br>
-               <h2>INFORME DE VENTAS</h2>
-                <p>Por favor seleccione la accion por la cual desea sacar un informe</p>
-          
-            </div>
-
-            
-
-
-
+               <h2>registro</h2>
+                         
+            </div> 
             <div class="card-body">
-                                <div class="bootstrap-data-table-panel">
+                            <div class="bootstrap-data-table-panel">
                                     <div class="table-responsive">
-                                        <?php
-                                         inforVentas()
-                                        ?>
+                                    <div class="login-form">
+                            <h4>Proveedor</h4>
+                            <form action="../controlador/controlprove/registrarproveedor.php" method="POST">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>idproveedor</label>
+                                        <input type="number" name="idproveedor" required class="form-control" placeholder="Ej: 24721343">
                                     </div>
-                                </div>
-                                </div>
-
-   
-
+                                    <div class="form-group col-md-6">
+                                        <label>nombres</label>
+                                        <input type="text" name="nombres" required class="form-control" placeholder="Ej: Maria Camila">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>apellidos</label>
+                                        <input type="text" name="apellidos" required class="form-control" placeholder="Ej: Perez Gaitan">
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6">
+                                        <label>telefono</label>
+                                        <input type="number" name="telefono" required class="form-control" placeholder="Ej: 3224335467">
+                                    </div>
+                                    
+                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Registrarme</button>
+                                
+                            </form>
+                        </div> 
+                        </div>
+                        </div>
+                        </div>
     <div>
 
     </div>
     </div>
 
     
-</div>
+</div> 
     
-
-    
-
-
-   
-    <!-- Incluye las bibliotecas de jQuery, DataTables y Buttons -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
@@ -187,30 +118,20 @@ require_once "vistas/parte_superior.php"
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
 
-   <!-- Incluye las bibliotecas adicionales para PDF y Excel -->
+
    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.excel.min.js"></script>
 
-    <!-- Incluye las bibliotecas de jQuery, DataTables y Buttons -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
-
-
 
     <script src="lib/xlsx.full.min.js"></script>
     <script src="../botonesjs/boton.js"></script>
-
-    
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 </html>

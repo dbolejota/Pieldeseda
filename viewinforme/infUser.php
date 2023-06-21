@@ -104,7 +104,10 @@ require_once "vistas/parte_superior.php"
                         </li>
 
                         <li>
-                            <a href="">
+                        <a href="../viewprovee/verproveedor.php">
+                                <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
+                                <span class="title">Provedores</span>
+                            </a> href="verproveedor.php">
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                                 <span class="title">Provedores</span>
                             </a>

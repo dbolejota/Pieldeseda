@@ -68,7 +68,7 @@ if (isset($_GET['login']) && $_GET['login'] === 'success') {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="viewprovee/verproveedor.php">
                         <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                         <span class="title">Provedores</span>
                     </a>
