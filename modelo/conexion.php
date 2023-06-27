@@ -10,7 +10,7 @@
             $host ="172.17.9.37";
             //nombre de la base de datos
             $db   ="mydb";
-            
+  		// esto es un comentarion desde mi rarma Jhonnathan          
             $conexion = new PDO("mysql:host=$host;dbname=$db;",$user, $pass);
             return $conexion;
         }
