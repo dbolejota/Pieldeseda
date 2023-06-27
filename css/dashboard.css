@@ -1,113 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-*
-{   margin: 0;
+* {
+    margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-}
-:root
-{
-    --pink:#ee9ca7;
-    --black:#222;
-    --white:#fff;
-    --blue:#a7bfe8;
-    --grey:#D9D9D9;
-}
-body
-{
+
+  }
+  
+  :root {
+    --pink: #ee9ca7;
+    --black: #222;
+    --white: #fff;
+    --blue: #a7bfe8;
+    --grey: #d9d9d9;
+  }
+  
+  body {
     min-height: 100vh;
-    overflow-x: hidden;
-} 
-.container
-{
+    background-image: url(../img/espumafondo.png);
+    backdrop-filter: blur(2.5px);
+  }
+  
+  .container {
     position: relative;
     width: 100%;
-}
-.cuadro
-{
-    position: fixed;
+  }
+  
+  .cuadro {
+    position: absolute;
     width: 300px;
     height: 100%;
-    background: var(--blue);
-    border-left: 10px solid var(--blue);
+    background: rgba(255, 255, 255, 0.47);
+    backdrop-filter: blur(15px);
     transition: 0.5s;
     overflow: hidden;
-}
-.cuadro.active
-{
+  }
+  
+  .cuadro.active {
     width: 80px;
-}
-.cuadro ul
-{
+  }
+  
+  .cuadro ul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-}
-.cuadro ul li
-{
+  }
+  
+  .cuadro ul li {
     position: relative;
     width: 100%;
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-}
-.cuadro ul li:hover,
-.cuadro ul li.hovered
-{
+  }
+  
+  .cuadro ul li:hover,
+  .cuadro ul li.hovered {
     background: var(--grey);
-}
-.cuadro ul li:nth-child(1)
-{
-   margin-bottom: 130px;
-   pointer-events: none;
-   padding-top: 10%;
-
-}
-.cuadro ul li a
-{
+  }
+  
+  .cuadro ul li:nth-child(1) {
+    margin-bottom: 130px;
+    pointer-events: none;
+    padding-top: 10%;
+  }
+  
+  .cuadro ul li a {
     position: relative;
     display: block;
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: var(--black);  
-    margin-bottom: 40px;
-}
-
-.cuadro ul li:hover a,
-.cuadro ul li.hovered a
-{
     color: var(--black);
-} 
-.cuadro ul li a .icon
-{
-   position: relative;
-   display: block;
-   padding: 0 10px;
-   height: 60px;
-   line-height: 70px;
-   text-align: start;
-   white-space: nowrap;
-}
-.cuadro ul li a .icon ion-icon
-{
-   font-size: 1.75em;
-}
-.cuadro ul li a .title{
-   position: relative; 
-   display: block;
-   padding: 0 10px;
-   height: 60px;
-   line-height: 60px;
-   text-align: start;
-   white-space: nowrap;
-}
-/* curvas del cuadro */
-.cuadro ul li:hover a::before,
-.cuadro ul li.hovered a::before
-{
-    content: '';
+    margin-bottom: 10px;
+  }
+  
+  .cuadro ul li:hover a,
+  .cuadro ul li.hovered a {
+    color: var(--black);
+  }
+  
+  .cuadro ul li a .icon {
+    position: relative;
+    display: block;
+    padding: 0 40px;
+    height: 60px;
+    line-height: 75px;
+    text-align: start;
+    white-space: nowrap;
+  }
+  
+
+  /* que tan grande el icono de usuairo,prove.etc */
+  .cuadro ul li a .icon ion-icon {
+    font-size: 1.75em;
+  }
+  
+  .cuadro ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    font-weight: 300;
+font-size: 30px;
+
+  }
+  
+  /* curvas del cuadro */
+  .cuadro ul li:hover a::before,
+  .cuadro ul li.hovered a::before {
+    content: "";
     position: absolute;
     right: 0;
     top: -50px;
@@ -117,11 +121,11 @@ body
     border-radius: 50%;
     box-shadow: 35px 35px 0px 10px var(--grey);
     pointer-events: none;
-}
-.cuadro ul li:hover a::after,
-.cuadro ul li.hovered a::after
-{
-    content: '';
+  }
+  
+  .cuadro ul li:hover a::after,
+  .cuadro ul li.hovered a::after {
+    content: "";
     position: absolute;
     right: 0;
     bottom: -50px;
@@ -130,90 +134,98 @@ body
     background: transparent;
     border-radius: 50%;
     box-shadow: 35px -30px 0px 10px var(--grey);
-    pointer-events: none; 
-}
-/* /Main/ */
-.main 
-{
+    pointer-events: none;
+  }
+  
+  /* /Main/ */
+  .main {
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
-    background: var(--grey);
-    transition: 0.5s;
+  }
+  
+.registrar{
+text-align: center;
+margin-right: 10px;
+position: absolute;
+width: 1020px;
+height: 171px;
+left: 450px;
+top: 23px;
+background: rgba(255, 255, 255, 0.47);
+backdrop-filter: blur(35px);
+border-radius: 20px;
+color: #ee9ca7;
+font-weight: 800;
+font-size: 48px;
+line-height: 58px;
 }
-.main.active
-{
-    width: calc(100% - 80px);
-    left: 80px;
+.cont-dash-informe {
+    text-align: center;
+        margin-right: 20px; /* Puedes ajustar este valor según tus necesidades */
+    }
+
+.clasesita {
+    width: 400px;
+    margin-left: 200px;
 }
-.top
-{
-    width: 100%;
-    height: 60px;
+.cuadrodeclase{
+    position: absolute;
+width: 1030px;
+height: 730px;
+left: 450px;
+top: 233px;
+background: rgba(255, 255, 255, 0.47);
+backdrop-filter: blur(35px);
+border-radius: 20px;
+}
+
+.image{
+width: 94px;
+height: 105px;
+left: 32px;
+top: 17px;
+}
+.logo-name {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    color: #fff;
+    font-weight: 1000;
 }
-.toggle
-{
-    position: relative;
-    top: 0px;
-    width: 60px;
-    height: 60px;
+
+.logo-image {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    cursor: pointer;
+    min-width: 45px;
 }
-.buscar
-{
-   position: relative;
-   width: 400px;
-   margin: 0 10px; 
 
-
-}
-.buscar label
-{
-   position: relative;
-   width: 100%; 
-}
-.buscar label input
-{
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    padding: 5px 20px;
-    padding-left: 35px;
-    outline:none;
-    border: 1px solid var(--black);
-    font-size: 18px;
-}
-.buscar label ion-icon
-{
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    font-size: 1.2em;
-}
-.user
-{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-}
-.user img
-{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.logo-image img {
+    width: 90px;
     object-fit: cover;
+    border-radius: 50%;
+}
+.logo-name .logo_name{
+    font-size: 22px;
+    font-weight: 800;
+    margin-left: 14px;
+}
+
+.logout{
+ top: 100px;
+}
+
+
+.logo-container {
+    display: inline-block; /*se muestre al lado */
+    margin-right: 10px; /* separar el logo del título */
+}
+
+.logo {
+    width: 200px; 
+    height: auto; 
+}
+
+.title {
+    display: inline-block;
 }
