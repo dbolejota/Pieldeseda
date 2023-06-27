@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piel de seda</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <!-- Incluye las bibliotecas de DataTables y Buttons -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
@@ -40,7 +40,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../viewproduc/verproductos.php">
                                 <span class="icon"><ion-icon name="briefcase-sharp"></ion-icon></span>
                                 <span class="title">Productos</span>
                             </a>

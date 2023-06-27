@@ -229,3 +229,9 @@ top: 17px;
 .title {
     display: inline-block;
 }
+
+
+.btn .regis {
+  width: 20px;
+  height: 20px;
+}

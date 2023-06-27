@@ -54,7 +54,7 @@ require_once "vistas/parte_superior.php"
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="viewproduc/verproductos.php">
                                 <span class="icon"><ion-icon name="briefcase-sharp"></ion-icon></span>
                                 <span class="title">Productos</span>
                             </a>

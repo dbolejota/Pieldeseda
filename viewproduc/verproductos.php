@@ -1,27 +1,9 @@
+<?php
+    require_once("../modelo/conexion.php");
+    require_once("../modelo/consultasprod.php");
 
-
-
-
-    <?php
-
-
-/// que carpetas se requieren 
-require_once('../modelo/conexion.php'); 
-require_once('../modelo/consultasinform.php');
-require_once('../controlador/mostrarinform.php'); 
-
-
-
+    require_once("../controlador/controlproduc/mostrar.php");
 ?>
-
-
-
-
-<!--
-meteer entre llaves de php
-require_once "vistas/parte_superior.php"
-
-//diseño de la base de datos-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,84 +38,62 @@ require_once "vistas/parte_superior.php"
                             <span class="logo_name">PIEL DE SEDA</span>
                         </div>
                     </li>
-                    <li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                <span class="title">inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                                <span class="title">Usuario</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><ion-icon name="briefcase-sharp"></ion-icon></span>
+                                <span class="title">Productos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../informes.php">
+                                <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
+                                <span class="title">Inventario</span>
+                            </a>
+                      </li>
+
+                        <li>
+                            <a href="../viewprovee/verproveedor.php">
+                                <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
+                                <span class="title">Provedores</span>
+                            </a>
+                            <li>
+                                    <a href="#"><i class="ti-pencil-alt"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="ti-eye"></i></a>
+                                </li>
+
+                                <li class="logout">
                         <a href="#">
-                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                            <span class="title">inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                            <span class="title">Usuario</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../viewproduc/verproductos.php">
-                            <span class="icon"><ion-icon name="briefcase-sharp"></ion-icon></span>
-                            <span class="title">Productos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../informes.php">
                             <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                            <span class="title">informes</span>
-                        </a>
-
-                       
-                            <li>
-                                <a href="infVentas.php"><i class="ti-pencil-alt"></i>Informe-VENTAS</a>
-                            </li>
-                            <li>
-                                <a href="infProve.php"><i class="ti-eye"></i>Informe-PROVEHEDORES</a>
-                            </li>
-                            <li>
-                                <a href="infProductos.php"><i class="ti-eye"></i>Informe-PRODUCTOS</a>
-                            </li>
-                            <li>
-                                <a href="infUser.php"><i class="ti-eye"></i>Informe-USUARIO</a>
-                            </li>
-
-
-                       
-
-                    </li>
-
-                    <li>
-                    <a href="../viewprovee/verproveedor.php">
-                            <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
-                            <span class="title">Provedores</span>
+                            <span class="title">Logout</span>
                         </a>
                     </li>
-                </ul>
-            </div>
-    </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
 
+    <div class="cont-dash-informe">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="cont-dash-informe">
-
-                
       
-<div class="registrar">
+    <div class="registrar">
     <div class="logo-container">
         <img src="../img/cf4d2bbf9bb991e42540b1eb55d2411c.png" alt="Logo de proveedores" class="logo">
     </div>
-    <h1 class="title">VENTAS</h1>
+    <h1 class="title">VER PRODUCTOS</h1>
     <br>
            
            
@@ -152,10 +112,14 @@ require_once "vistas/parte_superior.php"
         <div class="card-body">
                             <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive">
-                                    <?php
-                                     inforVentas()
-                                    ?>
-                                </div>
+                               
+                                        <?php
+                                             cargarproducto();
+                                            
+                                        ?>
+                                         <a class="btn btn-primary" href="registroproduc.php" role="button">Registra nuevo producto</a>
+
+</div>
                             </div>
                             </div>
 
@@ -172,7 +136,32 @@ require_once "vistas/parte_superior.php"
 
 
 </div>
+    <a class="btn btn-primary regis" href="registroproduc.php" role="button">Registrar</a>
+    
+</div>
 
+    
+
+    
+
+
+   
+    
+    <!-- Incluye las bibliotecas de jQuery, DataTables y Buttons -->
+
+    
+
+
+
+ 
+
+    
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 
 
@@ -213,4 +202,3 @@ require_once "vistas/parte_superior.php"
 
 </body>
 </html>
-

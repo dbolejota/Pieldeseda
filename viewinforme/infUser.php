@@ -31,35 +31,30 @@ require_once "vistas/parte_superior.php"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piel de seda</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <!-- Incluye las bibliotecas de DataTables y Buttons -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
-
-
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 </head>
 
 <body>
 
-
-
-
 <div class="informe">
 
 
-        <div class="cont-dash-btn">
-                <div class="cuadro">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
-                                <span class="title">Piel de seda</span>
-                            </a>
-                        </li>
+    <div class="cont-dash-btn">
+            <div class="cuadro">
+                <ul>
+                    <li>
+                        <div class="logo-name">
+                            <div class="logo-image">
+                                <img src="../img/clouds (1).png" alt="logo">
+                            </div>
+                            <span class="logo_name">PIEL DE SEDA</span>
+                        </div>
+                    </li>
                         <li>
                             <a href="#">
                                 <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
@@ -73,7 +68,7 @@ require_once "vistas/parte_superior.php"
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../viewproduc/verproductos.php">
                                 <span class="icon"><ion-icon name="briefcase-sharp"></ion-icon></span>
                                 <span class="title">Productos</span>
                             </a>
@@ -135,32 +130,29 @@ require_once "vistas/parte_superior.php"
     <div class="cont-dash-informe">
 
                     
-                        <div class="top">
-                            <div class="toggle">
-                                <ion-icon name="grid-sharp"></ion-icon>
-                            </div>
-                            <!--Buscar-->
-                            <div class="buscar">
-                                    <label>
-                                        <input type="text" placeholder="Buscar">
-                                        <ion-icon name="search-sharp"></ion-icon> 
-                                    </label>
-                            </div>
-                        </div>
-                        
+      
                     
 
-<!-- holaaa -->
-            <div>
-                <br>
-                    <br>
-               <h2>INFORME DE USUARIOS</h2>
-                <p>Por favor seleccione la accion por la cual desea sacar un informe</p>
-          
-            </div>
 
-            
+                 
+<div class="registrar">
+    <div class="logo-container">
+        <img src="../img/cf4d2bbf9bb991e42540b1eb55d2411c.png" alt="Logo de proveedores" class="logo">
+    </div>
+    <h1 class="title">USUARIO</h1>
+    <br>
+           
+           
+     
+</div>
 
+
+
+        
+<div>
+                    <div class="cuadrodeclase">
+                        <div class="clasesita">
+                        <p>Por favor seleccione la accion por la cual desea sacar un informe</p>
 
 
             <div class="card-body">
@@ -207,6 +199,11 @@ require_once "vistas/parte_superior.php"
 
     </div>
     </div>
+    </div>
+</div>
+
+
+</div>
 
     
 </div>
