@@ -11,13 +11,13 @@
             echo '<table id="bootstrap-data-table-export" class="table table-striped table-bordered">  
             <thead>
                 <tr>
-                    <th>idproducto</th>
-                    <th>nombre</th>
-                    <th>descripcion</th>
-                    <th>stock</th>
-                    <th>precio</th>
-                    <th>categoria</th>
-                    <th>factura del proveedor</th>  
+                    <th>id producto</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Categoria</th>
+                    <th>Factura del proveedor</th>  
                   <th>Ver/Editar</th> 
                     <th>Eliminar</th>  
 

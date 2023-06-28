@@ -94,17 +94,7 @@ if (isset($_GET['login']) && $_GET['login'] === 'success') {
         </div>
 
         <div class="cont-dash-informe">
-            <!-- <div class="top">
-                 <div class="toggle">
-                    <ion-icon name="grid-sharp"></ion-icon>
-                </div> -->
-            <!--Buscar-->
-            <!-- <div class="buscar">
-                    <label>
-                        <input type="text" placeholder="Buscar">
-                        <ion-icon name="search-sharp"></ion-icon>
-                    </label>
-                </div> -->
+    
 
                 <div class="registrar">
     <div class="logo-container">
