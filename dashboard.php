@@ -84,7 +84,7 @@ if (isset($_GET['login']) && $_GET['login'] === 'success') {
                         </a>
                     </li>
                     <li class="logout">
-                        <a href="#">
+                        <a href="login.php">
                             <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                             <span class="title">Logout</span>
                         </a>
