@@ -8,7 +8,7 @@
             echo '<h2>NO HAY PROVEEDORES REGISTRADOS</h2>';
         }else{
 
-            echo '<table id="bootstrap-data-table-export" class="table table-striped table-bordered">  
+            echo '<table id="bootstrap-data-table-export" class="table">  
             <thead>
                 <tr>
                     <th>idproveedor</th>
@@ -18,9 +18,7 @@
                    <th>Ver/Editar</th> 
                     <th>Eliminar</th>  
                 </tr>
-                
-            </thead>
-           
+            </thead> 
             <tbody>';
 
             foreach($result as $f){

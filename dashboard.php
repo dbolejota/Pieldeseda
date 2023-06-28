@@ -112,7 +112,6 @@ if (isset($_GET['login']) && $_GET['login'] === 'success') {
     </div>
     <h1 class="title">PROVEEDORES</h1>
 </div>
-
                 <div>
                     <div class="cuadrodeclase">
                         <div class="clasesita">

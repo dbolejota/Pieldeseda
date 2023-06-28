@@ -17,7 +17,7 @@
                     <th>stock</th>
                     <th>precio</th>
                     <th>categoria</th>
-                    <th>factura_proveedor_idfactura_proveedor</th>  
+                    <th>factura del proveedor</th>  
                   <th>Ver/Editar</th> 
                     <th>Eliminar</th>  
 

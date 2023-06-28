@@ -64,9 +64,14 @@
                                 <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                                 <span class="title">Provedores</span>
                             </a>
-                            
-
+        
                         </li>
+                        <li class="logout">
+                        <a href="login.php">
+                            <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
+                            <span class="title">Logout</span>
+                        </a>
+                    </li>
                     </ul>
                 </div>
         </div>

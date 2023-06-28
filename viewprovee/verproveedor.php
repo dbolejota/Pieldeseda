@@ -64,7 +64,7 @@ require_once("../controlador/controlprove/mostrar.php");
                         </a>
                     </li>
                     <li class="logout">
-                        <a href="#">
+                        <a href="../login.php">
                             <span class="icon"><ion-icon name="dice-sharp"></ion-icon></span>
                             <span class="title">Logout</span>
                         </a>
